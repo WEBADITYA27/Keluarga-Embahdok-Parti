@@ -1,0 +1,122 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem; /* Ukuran font yang besar */
+    margin-bottom: 10px; /* Jarak bawah dari elemen di atasnya */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+    letter-spacing: 2px; /* Spasi antar huruf */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Pilihan font family */
+    position: relative; /* Membuat posisi relatif */
+    display: inline-block; /* Menjadikan elemen sebagai blok inline */
+    padding: 10px 20px; /* Padding di sekitar teks */
+    background-color: 4682B4; /* Warna latar belakang */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s ease-in-out; /* Animasi transform */
+}
+
+header h1:hover {
+    transform: scale(1.1); /* Memperbesar elemen saat dihover */
+}
+
+/* Styling Main Section */
+main {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.foto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.column {
+    width: calc(100% / 7); /* Menentukan lebar kolom sesuai jumlah kolom */
+    margin: 10px; /* Jarak antar kolom */
+    overflow: hidden; /* Mengatasi masalah overflow jika ukuran foto tidak tetap */
+    position: relative; /* Membuat posisi relatif untuk memungkinkan nama di atas foto */
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk foto */
+}
+
+.column .nama-foto {
+    position: absolute;
+    top: 10px; /* Jarak dari atas */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Warna latar belakang */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0; /* Awalnya transparan */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.column:hover .nama-foto {
+    opacity: 1; /* Munculkan saat dihover */
+}
+
+/* Responsivitas */
+@media screen and (max-width: 1200px) {
+    .column {
+        width: calc(100% / 6); /* Jika layar lebih kecil dari 1200px, gunakan 6 kolom per baris */
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .column {
+        width: calc(100% / 5); /* Jika layar lebih kecil dari 1000px, gunakan 5 kolom per baris */
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        width: calc(100% / 4); /* Jika layar lebih kecil dari 800px, gunakan 4 kolom per baris */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: calc(100% / 3); /* Jika layar lebih kecil dari 600px, gunakan 3 kolom per baris */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .column {
+        width: 100%; /* Jika layar lebih kecil dari 400px, gunakan 1 kolom per baris */
+    }
+}
+
+/* Styling Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
